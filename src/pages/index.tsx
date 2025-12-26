@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import { Header } from '@/components/header';
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello World</h1>
-    </main>
+    <>
+      <Header />
+    </>
   );
 }
