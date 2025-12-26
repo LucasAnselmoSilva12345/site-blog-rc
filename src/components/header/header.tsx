@@ -10,7 +10,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <Logo />
 
-          <nav className="flex items-center gap-6 text-sm font-medium transition-colors">
+          <nav className="flex items-center gap-6">
             <ActiveLink href="/">Home</ActiveLink>
             <ActiveLink href="/blog">Blog</ActiveLink>
             <Button variant="secondary" asChild>
