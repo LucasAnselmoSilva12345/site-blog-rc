@@ -4,8 +4,10 @@ import Link from 'next/link';
 
 export function CallToAction() {
   return (
-    <section className="py-24 bg-linear-to-b from-cyan-950/20 to-gray-700">
-      <div className="container">
+    <section className="relative py-24 bg-linear-to-b from-cyan-950/20 to-gray-700">
+      <div className='absolute md:inset-0 md:block bg-[url("/background-call-to-action.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:opacity-90' />
+
+      <div className="container relative">
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="p-4 bg-cyan-300 w-fit rounded-full">
             <Store className="text-cyan-100" />

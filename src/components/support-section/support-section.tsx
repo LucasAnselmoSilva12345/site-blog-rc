@@ -2,8 +2,10 @@ import { HeartHandshake, PaintbrushVertical, Store } from 'lucide-react';
 
 export function SupportSection() {
   return (
-    <section className="pb-8 md:py-10">
-      <div className="container  flex flex-col items-center gap-12">
+    <section className="relative pb-8 md:py-10">
+      <div className='absolute md:inset-0 md:block bg-[url("/background-features.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:opacity-90' />
+
+      <div className="container relative flex flex-col items-center gap-12">
         <h2 className="text-balance text-center text-heading-xl text-gray-100 font-sans">
           Sua loja de afiliados, simples, do jeito que deveria ser
         </h2>
