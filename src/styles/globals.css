@@ -85,7 +85,7 @@
 
 @layer utilities {
   .container {
-    @apply p-[2rem] xl:px-6 mx-auto max-w-7xl;
+    @apply p-8 xl:px-6 mx-auto max-w-7xl;
   }
 
   .text-heading-hg {
