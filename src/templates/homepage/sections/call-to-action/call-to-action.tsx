@@ -7,11 +7,12 @@ export function CallToAction() {
     <section className="relative py-24 bg-linear-to-b from-cyan-950/20 to-gray-700">
       <div className='absolute md:inset-0 md:block bg-[url("/background-call-to-action.svg")] md:bg-cover md:bg-center md:bg-no-repeat md:opacity-90' />
 
+      <div className="absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 p-4 bg-cyan-300 w-fit rounded-full">
+        <Store className="text-cyan-100" />
+      </div>
+
       <div className="container relative">
         <div className="flex flex-col items-center gap-6 text-center">
-          <div className="p-4 bg-cyan-300 w-fit rounded-full">
-            <Store className="text-cyan-100" />
-          </div>
           <h2 className="font-sans text-balance text-center text-heading-xl text-gray-100">
             Crie uma loja online e inicie suas vendas ainda hoje
           </h2>
