@@ -1,5 +1,32 @@
 import { HeartHandshake, PaintbrushVertical, Store } from 'lucide-react';
 
+const supportFeatures = [
+  {
+    icon: PaintbrushVertical,
+    title: 'Personalize seu site',
+    content:
+      'Adicione sua logo, favicon, cores no seu catalago e tenha tudo com a sua cara.',
+    cardBg: 'bg-blue-400',
+    iconBg: 'bg-blue-300',
+  },
+  {
+    icon: Store,
+    title: 'Venda de qualquer loja',
+    content:
+      'Não importa a loja, o Site.Set permite que você insera qualquer link de afiliado.',
+    cardBg: 'bg-cyan-300',
+    iconBg: 'bg-cyan-200',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Receba suporte amigável',
+    content:
+      'Nossa equipe estará sempre pronta para te atender para ajudar no que for preciso.',
+    cardBg: 'bg-blue-400',
+    iconBg: 'bg-blue-300',
+  },
+];
+
 export function SupportSection() {
   return (
     <section className="relative pb-8 md:py-10">
@@ -11,44 +38,24 @@ export function SupportSection() {
         </h2>
 
         <div className="grid gap-6 md:grid-cols-3">
-          <div className="flex flex-col text-left gap-2 rounded-lg p-6 md:p-12 bg-blue-400">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-300 mb-4">
-              <PaintbrushVertical className="h-6 w-4 text-white" />
-            </div>
-            <strong className="text-heading-sm text-gray-100">
-              Personalize seu site
-            </strong>
-            <p className="text-body-sm text-gray-200">
-              Adicione sua logo, favicon, cores no seu catalago e tenha tudo com
-              a sua cara.
-            </p>
-          </div>
-
-          <div className="flex flex-col text-left gap-2 rounded-lg p-6 md:p-12 bg-cyan-300">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-cyan-200 mb-4">
-              <Store className="h-6 w-4 text-white" />
-            </div>
-            <strong className="text-heading-sm text-gray-100">
-              Venda de qualquer loja
-            </strong>
-            <p className="text-body-sm text-gray-200">
-              Não importa a loja, o Site.Set permite que você insera qualquer
-              link de afiliado.
-            </p>
-          </div>
-
-          <div className="flex flex-col text-left gap-2 rounded-lg p-6 md:p-12 bg-blue-400">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-300 mb-4">
-              <HeartHandshake className="h-6 w-4 text-white" />
-            </div>
-            <strong className="text-heading-sm text-gray-100">
-              Receba suporte amigável
-            </strong>
-            <p className="text-body-sm text-gray-200">
-              Nossa equipe estará sempre pronta para te atender para ajudar no
-              que for preciso.
-            </p>
-          </div>
+          {supportFeatures.map(
+            ({ icon: Icon, title, content, cardBg, iconBg }) => (
+              <div
+                className={`flex flex-col text-left gap-2 rounded-lg p-6 md:p-12 ${cardBg}`}
+                key={title}
+              >
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-lg ${iconBg} mb-4`}
+                >
+                  <Icon className="h-6 w-4 text-white" />
+                </div>
+                <strong className="text-heading-sm text-gray-100">
+                  {title}
+                </strong>
+                <p className="text-body-sm text-gray-200">{content}</p>
+              </div>
+            )
+          )}
         </div>
       </div>
     </section>
